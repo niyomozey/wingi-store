@@ -1,8 +1,7 @@
 import React from 'react';
-import { deleteProduct } from '../Product/ProductType'
 import { useDispatch } from 'react-redux';
-import ProductForm from '../Auth/ProductForm';
 import { Route, useNavigate } from 'react-router-dom';
+import { deleteProduct } from '../Product/ProductType'
 
 interface Product {
   id: number;

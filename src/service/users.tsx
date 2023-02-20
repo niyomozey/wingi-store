@@ -11,7 +11,13 @@ const users = [
         name: "Samsung Electronics",
         phonenumber: '0780532989',
         password : 'moise10'
-    }
+    },
+    {
+        email: 'admin@gmail.com',
+        name: "Apple inc.",
+        phonenumber: '0780532987',
+        password : 'admin'
+      },
 ];
 
 export default users

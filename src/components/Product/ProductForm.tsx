@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Router, useNavigate, useLocation } from "react-router-dom";
-import Footer from "../Footer/Footer";
 import AppHeader from "../Header/AppHeader";
+import { Router, useNavigate, useLocation } from "react-router-dom";
 import { addProduct, updateProduct, Product } from "../Product/ProductType";
 
 interface Props {

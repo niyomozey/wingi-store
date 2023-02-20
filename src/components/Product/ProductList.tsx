@@ -1,13 +1,13 @@
 import React from 'react';
-import { connect, ConnectedProps } from 'react-redux';
-import rootReducer from '../../store/RootReducer/rootReducer';
+import Footer from '../Footer/Footer';
 import { Product } from './ProductType';
 import ProductCard from './ProductCard';
-import { setSearchTerm, setFilter } from '../../store/filters/filterAction';
 import HeaderBar from '../Header/HeaderBar';
-import { useLocation, useNavigate } from 'react-router-dom';
 import AppHeader from '../Header/AppHeader';
-import Footer from '../Footer/Footer';
+import { connect, ConnectedProps } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
+import rootReducer from '../../store/RootReducer/rootReducer';
+import { setSearchTerm, setFilter } from '../../store/filters/filterAction';
 
 interface Props extends PropsFromRedux { }
 type RootState = ReturnType<typeof rootReducer>;

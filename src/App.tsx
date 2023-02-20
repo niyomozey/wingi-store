@@ -1,9 +1,8 @@
 import React from 'react';
-import ProductForm from './components/Auth/ProductForm';
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import ProductForm from './components/Product/ProductForm';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductList from './components/Product/ProductList';
 import Login from './components/Auth/Login';
-import AppHeader from './components/Header/AppHeader';
 
 function App() {
   return (
