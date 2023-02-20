@@ -1,10 +1,11 @@
 # WINGI store
 
-This project was build in react js with [typescript](https://github.com/facebook/create-react-app).
-
-# Product Manager Application
-
 This is a simple product management application built with TypeScript, React, Redux, and Tailwind CSS.
+
+## Short Demo
+
+[![Alt text](https://youtu.be/D0RXl_p5wvk)](https://youtu.be/D0RXl_p5wvk)
+
 
 ## Installation
 
@@ -45,5 +46,7 @@ If you'd like to contribute to this project, please fork the repository and crea
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
+
+
 
 
