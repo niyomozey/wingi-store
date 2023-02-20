@@ -1,0 +1,6 @@
+.react-calendar__month-view__days{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+}
