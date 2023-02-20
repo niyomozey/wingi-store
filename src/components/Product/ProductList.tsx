@@ -14,34 +14,50 @@ type RootState = ReturnType<typeof rootReducer>;
 let editMode: boolean = false;
 
 const ProductList: React.FC<Props> = ({ products, searchTerm, filter, setSearchTerm, setFilter }) => {
+
+    let location = useLocation()
+    let navigate = useNavigate();
+    const retreivedData = location.state
+    editMode = retreivedData ? true : false;
+    let loggedIn: boolean = false;
+    let users: any;
+
+    if (retreivedData) {
+        const { user, isLogin }: any = retreivedData
+        users = user
+        loggedIn = isLogin ? true : false
+    }
     const filteredProducts = products.products.filter((product: Product) => {
+
         const searchTermInName = product.name.toLowerCase().includes(searchTerm.toLowerCase());
         const searchTermInDescription = product.description.toLowerCase().includes(searchTerm.toLowerCase());
         const searchTermInProductOwner = product.productOwner.toLowerCase().includes(searchTerm.toLowerCase());
 
         if (filter === 'all') {
+            if (users != undefined) {
+                const searchTermInProductOwner = product.productOwner.toLowerCase().includes(users.name.toLowerCase());
+                return searchTermInProductOwner;
+            }
+
             return searchTermInName || searchTermInDescription || searchTermInProductOwner;
         } else {
             return product.category.toLowerCase().includes(filter.toLocaleLowerCase()) && (searchTermInName || searchTermInDescription || searchTermInProductOwner);
         }
     });
 
-    let location = useLocation()
-    let navigate = useNavigate();
 
-    const retreivedData = location.state
-    editMode = retreivedData ? true : false;
+
 
     const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setFilter(e.target.value);
     };
-    const handleOnCreateClick = () =>{
-        navigate(`/pform`, {  replace: true   })
+    const handleOnCreateClick = () => {
+        navigate(`/pform`, { replace: true })
     }
 
     return (
         <div>
-            <AppHeader title='Header' />
+            <AppHeader title='Header' isLogin={loggedIn} />
             <div className="mb-4 w-1/2 mx-auto">
                 <HeaderBar />
             </div>
@@ -57,10 +73,10 @@ const ProductList: React.FC<Props> = ({ products, searchTerm, filter, setSearchT
                         onChange={handleFilterChange}
                     >
                         <option value="all">All categories</option>
-                        <option value="Computer">Computer</option>
                         <option value="Phone">Phone</option>
-                        <option value="Car">Car</option>
+                        <option value="TV">TV</option>
                         <option value="Drone">Drone</option>
+                        <option value="Laptop">Laptop</option>
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -72,10 +88,16 @@ const ProductList: React.FC<Props> = ({ products, searchTerm, filter, setSearchT
                         </svg>
                     </div>
                 </div>
+                <div>
+
+                </div>
                 <button className="mx-auto bg-lime-600 hover:bg-lime-500 text-white font-bold py-2 px-4 rounded"
-                 type="button"
-                 onClick={handleOnCreateClick}
-                 >Add Product</button>
+                    type="button"
+                    hidden={!editMode}
+                    onClick={handleOnCreateClick}
+                >Add Product
+                </button>
+
             </div>
 
             {filteredProducts.length == 0 ? (

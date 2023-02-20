@@ -10,6 +10,17 @@ const Footer: React.FC<Props> = () => {
         <div>
           <p>&copy; WINGI store 2023</p>
         </div>
+        <div>
+          <a href="#" className="mx-3 hover:text-gray-400">
+            About
+          </a>
+          <a href="#" className="mx-3 hover:text-gray-400">
+            Contact
+          </a>
+          <a href="#" className="mx-3 hover:text-gray-400">
+            FAQ
+          </a>
+        </div>
       </div>
     </footer>
   );

@@ -28,13 +28,13 @@ const ProductCard = ({ product, editMode }: { product: Product, editMode: boolea
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={imageUrl} alt={name} />
+      <img className="w-full h-80" src={imageUrl} alt={name} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{name}</div>
         <p className="text-gray-700 text-base h-13 mb-2">{description}</p>
         <p className="text-gray-700 text-base flex flex-row items-center">Price:<p className='bg-amber-100 text-black rounded-lg px-3 py-1'>$ {price}</p> </p>
-        <p className="text-gray-700 text-base">Sold by: {productOwner}</p>
-        <p className="text-gray-700 text-base">Category: {category}</p>
+        {/* <p className="text-gray-700 text-base">Sold by: {productOwner}</p>
+        <p className="text-gray-700 text-base">Category: {category}</p> */}
       </div>
       <div className="border-t-4 inset-x-0  bottom-0 h-17 px-6 py-4 flex justify-between">
         <button

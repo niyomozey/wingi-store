@@ -38,7 +38,8 @@ const Login: React.FC<LoginProps> = ({ user }) => {
                 navigate(`/`, {
                     state: {
                         email: email,
-                        user: User[0]
+                        user: User[0],
+                        isLogin : true
                     }
                 })
             } else {
@@ -53,7 +54,7 @@ const Login: React.FC<LoginProps> = ({ user }) => {
 
     return (
         <div>
-            <AppHeader title="Header" />
+            <AppHeader title="Header" isLogin={false} />
             <div className="fixed inset-0 z-50 overflow-y-auto">
                 <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
                     <div className="fixed inset-0 transition-opacity" aria-hidden="true">

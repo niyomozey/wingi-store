@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 interface Props {
   title: string;
+  isLogin : boolean
 }
 
-const AppHeader: React.FC<Props> = ({ title }) => {
+const AppHeader: React.FC<Props> = ({ title, isLogin }) => {
   let navigate = useNavigate();
   const handleOnClick = () => {
     navigate(`/login`, {
@@ -25,13 +26,9 @@ const AppHeader: React.FC<Props> = ({ title }) => {
           className="text-white rounded-md bg-blue-700 py-2 px-4 mr-4"
           onClick={handleOnClick}          
         >
-          Login
-        </button>
-        <button className="text-blue-500 rounded-md border border-blue-500 py-2 px-4 mr-4">
-          Button 1
-        </button>
-        <button className="text-blue-500 rounded-md border border-blue-500 py-2 px-4">
-          Button 2
+          {
+            isLogin ? "Logout" : "Login"
+          }
         </button>
       </div>
     </header>

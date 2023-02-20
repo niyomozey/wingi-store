@@ -16,7 +16,7 @@ const products = [
 	  description: "Samsung's flagship smartphone with a stunning display and powerful performance",
 	  productOwner: "Samsung Electronics",
 	  category: "Smartphone",
-	  imageUrl: "/assets/I_phone_4.png"
+	  imageUrl: "/assets/galaxy.jpg"
 	},
 	{
 	  id: 3,
@@ -25,16 +25,16 @@ const products = [
 	  description: "Wireless noise-cancelling headphones with high-quality audio",
 	  productOwner: "Sony Corporation",
 	  category: "Headphones",
-	  imageUrl: "/assets/I_phone_4.png"
+	  imageUrl: "/assets/canon.jpg"
 	},
 	{
 	  id: 4,
-	  name: "MacBook Pro",
+	  name: "Airpod",
 	  price: 1299,
 	  description: "Apple's powerful and portable laptop for professional use",
 	  productOwner: "Apple Inc.",
 	  category: "Laptop",
-	  imageUrl: "/assets/I_phone_4.png"
+	  imageUrl: "/assets/airpod.jpg"
 	},
 	{
 	  id: 5,
@@ -43,25 +43,25 @@ const products = [
 	  description: "Samsung's 4K QLED TV with impressive brightness and color accuracy",
 	  productOwner: "Samsung Electronics",
 	  category: "TV",
-	  imageUrl: "/assets/I_phone_4.png"
+	  imageUrl: "/assets/samtv.jpg"
 	},
 	{
 	  id: 6,
-	  name: "PlayStation 5",
+	  name: "I watch",
 	  price: 499,
 	  description: "Sony's latest gaming console with high-performance hardware",
 	  productOwner: "Sony Corporation",
-	  category: "Gaming Console",
-	  imageUrl: "/assets/I_phone_4.png"
+	  category: "Gadgets",
+	  imageUrl: "/assets/iwatch.jpg"
 	},
 	{
 	  id: 7,
-	  name: "Nintendo Switch",
+	  name: "Sunglasses",
 	  price: 299,
 	  description: "Hybrid gaming console for use at home and on the go",
 	  productOwner: "Nintendo Co., Ltd.",
-	  category: "Gaming Console",
-	  imageUrl: "/assets/I_phone_4.png"
+	  category: "Gadgets",
+	  imageUrl: "/assets/sumgrassess.jpg"
 	},
 	{
 	  id: 8,
@@ -70,25 +70,25 @@ const products = [
 	  description: "High-end mirrorless camera with 45 megapixel sensor and 8K video recording",
 	  productOwner: "Canon Inc.",
 	  category: "Camera",
-	  imageUrl: "/assets/I_phone_4.png"
+	  imageUrl: "/assets/canon.jpg"
 	},
 	{
 	  id: 9,
-	  name: "DJI Mavic Air 2",
+	  name: "Makeup",
 	  price: 799,
 	  description: "Compact drone with 4K camera and advanced features",
 	  productOwner: "DJI Technology Co., Ltd.",
 	  category: "Drone",
-	  imageUrl: "/assets/I_phone_4.png"
+	  imageUrl: "/assets/makeup.jpg"
 	},
 	{
 	  id: 10,
-	  name: "Bose QuietComfort Earbuds",
+	  name: "MacBook Air",
 	  price: 279,
 	  description: "Wireless earbuds with noise-cancelling technology and clear sound",
 	  productOwner: "DJI Technology Co., Ltd.",
 	  category: "Drone",
-	  imageUrl: "/assets/I_phone_4.png"
+	  imageUrl: "/assets/marbook_air.jpg"
 	},
 ];
 
